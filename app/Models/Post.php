@@ -15,4 +15,8 @@ class Post extends Model
     //tidak boleh diisi
     protected $guarded =['id'];
 
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
 }
