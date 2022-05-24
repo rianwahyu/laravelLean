@@ -16,9 +16,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        User::factory(3)->create();
 
-        User::create([
+        /* User::create([
             'name' => 'Rian Wahyu',
             'email' => 'rianwahyu26@gmail.com',
             'password' => bcrypt('12345')
@@ -28,7 +28,8 @@ class DatabaseSeeder extends Seeder
             'name' => 'Yusliana Gadis',
             'email' => 'yuslianagadis@gmail.com',
             'password' => bcrypt('12345')
-        ]);
+        ]); */
+
 
         Category::create([
             'name' => 'Web Programming',
@@ -40,7 +41,10 @@ class DatabaseSeeder extends Seeder
             'slug' =>'personal'
         ]);
 
-        Post::create([
+
+        Post::factory(20)->create();
+
+        /* Post::create([
             'title' => 'Judul Pertama',
             'slug' => 'judul-pertama',
             'excerpt' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae qui exercitationem inventore nulla placeat expedita',
@@ -76,7 +80,7 @@ class DatabaseSeeder extends Seeder
             'body' =>'Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae qui exercitationem inventore nulla placeat expedita corporis soluta labore itaque facilis illum aliquid incidunt, aperiam officia minima velit quisquam fugit deserunt adipisci quis, corrupti obcaecati. Voluptatum, perspiciatis recusandae illum, nobis iure deserunt culpa ut mollitia quas dolore eligendi nulla quis sapiente omnis repellendus quia provident. Facere minus natus praesentium hic vitae expedita nostrum, consectetur incidunt, laborum cum ipsum impedit quasi iusto ipsam, voluptate voluptates. Ad molestias tempora eligendi. Consequuntur sapiente temporibus error, quibusdam distinctio quia dolor eius tenetur molestiae inventore alias reprehenderit quam cumque necessitatibus sequi porro magnam laboriosam qui excepturi.',
             'category_id' => 2,
             'user_id' => 2,
-        ]);
+        ]); */
     }
 
 }
